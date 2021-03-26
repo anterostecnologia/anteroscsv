@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.anteros</groupId>
 	<artifactId>Anteros-CSV</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 
 	<name>Anteros CSV</name>
 	<description>
@@ -42,7 +42,7 @@
 			</roles>
 		</developer>
 	</developers>
-	
+
 	<properties>
 		<java.versao>1.8</java.versao>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -53,7 +53,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<springframework.version>5.0.7.RELEASE</springframework.version>
 		<springsecurity.version>5.0.6.RELEASE</springsecurity.version>
-	 </properties>
+	</properties>
 
 
 	<dependencies>
@@ -70,6 +70,32 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>local-REPO</id>
+			<url>http://vps4657.publiccloud.com.br:8082/artifactory/libs-release-local</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>local-REPO</id>
+			<url>http://vps4657.publiccloud.com.br:8082/artifactory/libs-release-local</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<profiles>
 		<profile>
@@ -252,7 +278,7 @@
 				</repository>
 			</repositories>
 		</profile>
-		
+
 		<profile>
 			<id>local</id>
 			<build>
@@ -299,7 +325,7 @@
 				</pluginManagement>
 			</build>
 
-			
+
 		</profile>
 	</profiles>
 </project>
